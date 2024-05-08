@@ -17,5 +17,7 @@ function isRealPalindrome(string) {
   return string.toLowerCase() === reversedCleanString; //compare
 }
 
-console.log(isRealPalindrome("Madam"));
-console.log(isRealPalindrome("Madam, I'm Adam"));
+// console.log(isRealPalindrome("Madam"));
+// console.log(isRealPalindrome("Madam, I'm Adam"));
+
+const isPalindromicNumber = (num) => {};
