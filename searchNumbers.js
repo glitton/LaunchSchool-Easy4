@@ -31,4 +31,15 @@ function searchNumbers() {
   }
 }
 
-searchNumbers();
+// searchNumbers();
+
+function isIncluded(arr, val) {
+  for (let idx = 0; idx < arr.length; idx++) {
+    const greaterThanValue = arr[idx] > val;
+    let result = arr.some(greaterThanValue);
+    console.log(result);
+  }
+}
+
+let arr = [10, 20, 30, 5, 6];
+isIncluded(arr, 18);
