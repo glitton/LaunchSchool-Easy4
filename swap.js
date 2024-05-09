@@ -1,5 +1,5 @@
 function swap(string) {
-  const reversedString = string.split("");
+  const reversedString = string.split("").reverse().join("");
   return reversedString;
 }
 
