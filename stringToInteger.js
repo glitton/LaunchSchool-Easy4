@@ -11,6 +11,8 @@ function stringToInteger(string) {
     7: 7,
     8: 8,
     9: 9,
+    "+": "+",
+    "-": "-",
   };
   let arrayOfNumbers = string.split("").map((char) => DIGITS[char]);
 
@@ -55,4 +57,19 @@ function hexadecimalToInteger(string) {
   return hexValue;
 }
 
-console.log(hexadecimalToInteger("4D9f"));
+// console.log(hexadecimalToInteger("4D9f"));
+
+function stringToSignedInteger(string) {
+  switch (string[0]) {
+    case "-":
+      return -stringToInteger(string.slice(1, string.length));
+    case "+":
+      return stringToInteger(string.slice(1, string.length));
+    default:
+      return stringToInteger(string);
+  }
+}
+
+console.log(stringToSignedInteger("-15070"));
+
+//for slice, default for start is 0 and end is string.length
